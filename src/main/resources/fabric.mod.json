@@ -20,6 +20,9 @@
 		],
 		"fabric-datagen": [
 			"dev.meteoroid.repairamulet.RepairAmuletDataGenerator"
+		],
+		"client": [
+			"dev.meteoroid.repairamulet.RepairAmuletClient"
 		]
 	},
 	"mixins": [
