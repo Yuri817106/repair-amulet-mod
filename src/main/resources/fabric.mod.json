@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "repairamulet",
+	"version": "${version}",
+	"name": "RepairAmulet",
+	"description": "This mod can repair your items and tools",
+	"authors": [
+		"Meteoroid"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/Yuri817106/repair-amulet-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/repairamulet/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"dev.meteoroid.repairamulet.RepairAmulet"
+		],
+		"fabric-datagen": [
+			"dev.meteoroid.repairamulet.RepairAmuletDataGenerator"
+		]
+	},
+	"mixins": [
+		"repairamulet.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.10",
+		"minecraft": "~1.21.4",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
