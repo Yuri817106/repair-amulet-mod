@@ -29,7 +29,8 @@ public class RepairAmulet implements ModInitializer {
 	//			Identifier.of("repairamulet", "repair_amulet")
 	//	);
 	//	private static Item REPAIR_AMULET;
-
+	public static final int TICKS_PER_SECOND_LV1 = 30;
+	public static int tickCounter = 0;
 	@Override
 	public void onInitialize() {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
@@ -39,11 +40,15 @@ public class RepairAmulet implements ModInitializer {
 		ModItems.registerModItems();
 
 		ServerTickEvents.END_SERVER_TICK.register(server -> {
-			server.getPlayerManager().getPlayerList().forEach(player -> {
-				if (hasAmulet(player)) {
-					repairAllItems(player);
-				}
-			});
+			tickCounter++;
+			if (tickCounter >= TICKS_PER_SECOND_LV1) {
+				server.getPlayerManager().getPlayerList().forEach(player -> {
+					if (hasAmulet(player)) {
+						repairAllItems(player);
+					}
+					tickCounter = 0;
+				});
+			}
 		});
 
 		LOGGER.info("Hello Fabric world!");
