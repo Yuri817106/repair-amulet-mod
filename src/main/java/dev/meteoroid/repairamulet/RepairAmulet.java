@@ -29,9 +29,12 @@ public class RepairAmulet implements ModInitializer {
 	//			Identifier.of("repairamulet", "repair_amulet")
 	//	);
 	//	private static Item REPAIR_AMULET;
-	public static final int TICKS_PER_SECOND_LV1 = 30;
+	public static final int TICKS_PER_SECOND_LV1 = 50;
+	public static final int TICKS_PER_SECOND_LV2 = 25;
+	public static final int TICKS_PER_SECOND_LV3 = 15;
 	public static int tickCounter = 0;
-	@Override
+
+    @Override
 	public void onInitialize() {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
 		// However, some things (like resources) may still be uninitialized.
@@ -41,17 +44,25 @@ public class RepairAmulet implements ModInitializer {
 
 		ServerTickEvents.END_SERVER_TICK.register(server -> {
 			tickCounter++;
-			if (tickCounter >= TICKS_PER_SECOND_LV1) {
-				server.getPlayerManager().getPlayerList().forEach(player -> {
-					if (hasAmulet(player)) {
-						repairAllItems(player);
-					}
-					tickCounter = 0;
-				});
+			for (ServerPlayerEntity player : server.getPlayerManager().getPlayerList()) {
+				int repairSpeed = getRepairSpeed(player);
+				if (repairSpeed > 0 && tickCounter >= repairSpeed) {
+					repairAllItems(player);
+				}
+				if (tickCounter >= repairSpeed) {
+					tickCounter = 0; // 重置計數器
+				}
 			}
 		});
 
 		LOGGER.info("Hello Fabric world!");
+	}
+
+	private int getRepairSpeed(ServerPlayerEntity player) {
+		if (hasAmulet(player, ModItems.REPAIR_AMULET_LV3)) return TICKS_PER_SECOND_LV3;
+		if (hasAmulet(player, ModItems.REPAIR_AMULET_LV2)) return TICKS_PER_SECOND_LV2;
+		if (hasAmulet(player, ModItems.REPAIR_AMULET_LV1)) return TICKS_PER_SECOND_LV1;
+		return -1; // 沒有護身符
 	}
 
 	private void repairAllItems(PlayerEntity player) {
@@ -67,20 +78,10 @@ public class RepairAmulet implements ModInitializer {
 		}
 	}
 
-	private boolean hasAmulet(ServerPlayerEntity player) {
-		if (ModItems.REPAIR_AMULET == null) {
-			LOGGER.error("REPAIR_AMULET is null!");
-			return false;
-		}
-		for (ItemStack stack : player.getInventory().main) {
-			if (stack.getItem() == ModItems.REPAIR_AMULET) return true;
-		}
-		for (ItemStack stack : player.getInventory().armor) {
-			if (stack.getItem() == ModItems.REPAIR_AMULET) return true;
-		}
-		for (ItemStack stack : player.getInventory().offHand) {
-			if (stack.getItem() == ModItems.REPAIR_AMULET) return true;
-		}
+	private boolean hasAmulet(ServerPlayerEntity player, Item amuletLevel) {
+		for (ItemStack stack : player.getInventory().main) if (stack.getItem() == amuletLevel) return true;
+		for (ItemStack stack : player.getInventory().armor) if (stack.getItem() == amuletLevel) return true;
+		for (ItemStack stack : player.getInventory().offHand) if (stack.getItem() == amuletLevel) return true;
 		return false;
 	}
 }

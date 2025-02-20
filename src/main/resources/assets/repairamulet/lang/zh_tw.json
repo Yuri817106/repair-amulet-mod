@@ -1,3 +1,5 @@
 {
-  "item.repairamulet.repair_amulet": "修補護符"
+  "item.repairamulet.repair_amulet_lv1": "修補護符 LV.1",
+  "item.repairamulet.repair_amulet_lv2": "修補護符 LV.2",
+  "item.repairamulet.repair_amulet_lv3": "修補護符 LV.3"
 }

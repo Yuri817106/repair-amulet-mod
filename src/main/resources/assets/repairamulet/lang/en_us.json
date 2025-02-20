@@ -1,3 +1,5 @@
 {
-  "item.repairamulet.repair_amulet": "Repair Amulet"
+  "item.repairamulet.repair_amulet_lv1": "Repair Amulet LV.1",
+  "item.repairamulet.repair_amulet_lv2": "Repair Amulet LV.2",
+  "item.repairamulet.repair_amulet_lv3": "Repair Amulet LV.3"
 }

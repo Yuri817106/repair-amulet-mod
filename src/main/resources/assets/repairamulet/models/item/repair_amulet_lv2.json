@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "repairamulet:item/repair_amulet"
+    "layer0": "repairamulet:item/repair_amulet_lv2"
   }
 }

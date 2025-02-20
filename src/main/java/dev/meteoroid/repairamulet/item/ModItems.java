@@ -12,7 +12,10 @@ import java.util.function.Function;
 
 public class ModItems {
 
-    public static final Item REPAIR_AMULET = registerItem("repair_amulet", Item::new, new Item.Settings().maxCount(1));
+    public static final Item REPAIR_AMULET_LV1 = registerItem("repair_amulet_lv1", Item::new, new Item.Settings().maxCount(1));
+    public static final Item REPAIR_AMULET_LV2 = registerItem("repair_amulet_lv2", Item::new, new Item.Settings().maxCount(1));
+    public static final Item REPAIR_AMULET_LV3 = registerItem("repair_amulet_lv3", Item::new, new Item.Settings().maxCount(1));
+
 
     private static Item registerItem(String name, Function<Item.Settings, Item> factory, Item.Settings settings) {
         final RegistryKey<Item> registryKey = RegistryKey.of(Registries.ITEM.getKey(), Identifier.of(RepairAmulet.MOD_ID, name));
