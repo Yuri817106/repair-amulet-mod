@@ -62,7 +62,7 @@ public class RepairAmulet implements ModInitializer {
 		if (hasAmulet(player, ModItems.REPAIR_AMULET_LV3)) return TICKS_PER_SECOND_LV3;
 		if (hasAmulet(player, ModItems.REPAIR_AMULET_LV2)) return TICKS_PER_SECOND_LV2;
 		if (hasAmulet(player, ModItems.REPAIR_AMULET_LV1)) return TICKS_PER_SECOND_LV1;
-		return -1; // 沒有護身符
+		return -1;
 	}
 
 	private void repairAllItems(PlayerEntity player) {
