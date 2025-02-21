@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "cig",
+        "ERD",
+        "L#n"
+    ],
+    "key": {
+        "c": "minecraft:copper_ingot",
+        "i": "minecraft:iron_ingot",
+        "g": "minecraft:gold_ingot",
+        "E": "minecraft:emerald",
+        "R": "repairamulet:repair_amulet_lv2",
+        "D": "minecraft:diamond",
+        "L": "minecraft:redstone",
+        "#": "minecraft:lapis_lazuli",
+        "n": "minecraft:netherite_ingot"
+    },
+    "result": {
+        "id": "repairamulet:repair_amulet_lv3",
+        "count": 1
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "key": {
+        "#": "minecraft:diamond",
+        "i": "minecraft:iron_ingot",
+        "R": "repairamulet:repair_amulet_lv1"
+    },
+    "pattern": [
+        "#i#",
+        "iRi",
+        "#i#"
+    ],
+    "result": {
+        "id": "repairamulet:repair_amulet_lv2",
+        "count": 1
+    }
+}
