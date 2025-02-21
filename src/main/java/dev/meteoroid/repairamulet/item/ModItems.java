@@ -1,7 +1,11 @@
 package dev.meteoroid.repairamulet.item;
 
 import dev.meteoroid.repairamulet.RepairAmulet;
+import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroups;
 import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -22,7 +26,14 @@ public class ModItems {
         return Items.register(registryKey, factory, settings);
     }
 
+    private static void repairAmulet(FabricItemGroupEntries entries) {
+        entries.add(REPAIR_AMULET_LV1);
+        entries.add(REPAIR_AMULET_LV2);
+        entries.add(REPAIR_AMULET_LV3);
+    }
+
     public static void registerModItems() {
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(ModItems::repairAmulet);
         RepairAmulet.LOGGER.info("Registering Mod Items for " + RepairAmulet.MOD_ID);
     }
 }
