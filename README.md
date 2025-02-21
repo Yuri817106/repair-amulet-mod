@@ -14,6 +14,12 @@ This Minecraft mod adds three amulets that automatically repair the durability o
 
 Simply place the amulet in your inventory, and it will start restoring durability automatically.
 
+### Recipes
+
+![Repair Amulet LV.1](https://raw.githubusercontent.com/Yuri817106/recipeImage/recipe1.png)
+![Repair Amulet LV.2](https://raw.githubusercontent.com/Yuri817106/recipeImage/recipe2.png)
+![Repair Amulet LV.3](https://raw.githubusercontent.com/Yuri817106/recipeImage/recipe3.png)
+
 ---
 
 # 修復護符模組（Repair Amulets Mod） <a name="繁體中文"></a>
@@ -31,3 +37,9 @@ Simply place the amulet in your inventory, and it will start restoring durabilit
 ### 使用方式
 
 只需將護符放在物品欄內，裝備的耐久度便會自動修復。
+
+### 配方
+
+![Repair Amulet LV.1](https://raw.githubusercontent.com/Yuri817106/recipeImage/recipe1.png)
+![Repair Amulet LV.2](https://raw.githubusercontent.com/Yuri817106/recipeImage/recipe2.png)
+![Repair Amulet LV.3](https://raw.githubusercontent.com/Yuri817106/recipeImage/recipe3.png)
