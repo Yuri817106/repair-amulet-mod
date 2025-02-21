@@ -50,7 +50,7 @@ public class RepairAmulet implements ModInitializer {
 					repairAllItems(player);
 				}
 				if (tickCounter >= repairSpeed) {
-					tickCounter = 0; // 重置計數器
+					tickCounter = 0;
 				}
 			}
 		});
