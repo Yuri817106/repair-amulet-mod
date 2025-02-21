@@ -16,9 +16,9 @@ Simply place the amulet in your inventory, and it will start restoring durabilit
 
 ### Recipes
 
-![Repair Amulet LV.1](https://github.com/Yuri817106/recipeImage/recipe1.png)
-![Repair Amulet LV.2](https://github.com/Yuri817106/recipeImage/recipe2.png)
-![Repair Amulet LV.3](https://github.com/Yuri817106/recipeImage/recipe3.png)
+![Repair Amulet LV.1](https://raw.githubusercontent.com/Yuri817106/repair-amulet-mod/refs/heads/main/recipeImage/recipe1.png)
+![Repair Amulet LV.2](https://raw.githubusercontent.com/Yuri817106/repair-amulet-mod/refs/heads/main/recipeImage/recipe2.png)
+![Repair Amulet LV.3](https://raw.githubusercontent.com/Yuri817106/repair-amulet-mod/refs/heads/main/recipeImage/recipe3.png)
 
 ---
 
@@ -40,6 +40,6 @@ Simply place the amulet in your inventory, and it will start restoring durabilit
 
 ### 配方
 
-![Repair Amulet LV.1](https://github.com/Yuri817106/recipeImage/recipe1.png)
-![Repair Amulet LV.2](https://github.com/Yuri817106/recipeImage/recipe2.png)
-![Repair Amulet LV.3](https://github.com/Yuri817106/recipeImage/recipe3.png)
+![Repair Amulet LV.1](https://raw.githubusercontent.com/Yuri817106/repair-amulet-mod/refs/heads/main/recipeImage/recipe1.png)
+![Repair Amulet LV.2](https://raw.githubusercontent.com/Yuri817106/repair-amulet-mod/refs/heads/main/recipeImage/recipe2.png)
+![Repair Amulet LV.3](https://raw.githubusercontent.com/Yuri817106/repair-amulet-mod/refs/heads/main/recipeImage/recipe3.png)
